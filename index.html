@@ -3,14 +3,75 @@
     <head>
         <meta charset="UTF-8">
         <title>
-            Get Some Crystals!
+            Cats in Tights!
         </title>
+        <link rel="icon" href="assets/images/favicon.png">
         <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     <body>
-        
+        <div class="jumbotron">
+            <h1 class="display-4">Cats in Tights!</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="h2">Let's play!</h2>
+                    <hr>
+                    <h4 class="h4">You'll be given a random number between 20-100.</h4>
+                    <h4 class="h4">Your goal is to match the number exactly by clicking on one of the kitties,
+                        with each one worth a different amount of points every round.
+                    </h4>
+                    <h4 class="h4">If you match the number exactly without exceeding it, you'll get a win!
+                        If you go over the given number, you'll get a loss.
+                    </h4>
+                    <h4 class="h4">Best of luck!</h4>
+                    <br>
+                    <button type="button" class="btn btn-success" id="start" onclick="numberGenerator()">Start</button>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                    <h2 class="card-header">Number to get to: <span id="randomNumber"></span></h2>
+                    <div class="card-text center-block">
+                        <div id="game">
+                        <img src="assets/images/cat1.jpg" class="game-pic" id="cat1" onclick="addPoints1();">
+                        <img src="assets/images/cat2.jpg" class="game-pic" id="cat2" onclick="addPoints2();">
+                        <img src="assets/images/cat3.jpg" class="game-pic" id="cat3" onclick="addPoints3();">
+                        <img src="assets/images/cat4.jpg" class="game-pic" id="cat4" onclick="addPoints4();">
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <h2>Points so far: <span id="playerPoints"></span></h2>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <h2 class="card-header">How you've done</h2>
+                        <div class="card-text">
+                            <p>Wins: <span id="wins"></span></p>
+                            <p>Losses: <span id="losses"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card-footer">
+                        <p id="end">&copy; Ryan McKenzie 2018</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="assets/javascript/game.js"></script>
     </body>
 </html>
