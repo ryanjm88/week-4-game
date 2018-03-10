@@ -29,7 +29,7 @@ document.getElementById("losses").innerHTML = losses;
 var numberGenerator = function ()  { 
     numberToGuess = randomNumberToGuess
     document.getElementById("randomNumber").innerHTML = numberToGuess;
-    return numberToGuess;
+
 
 
 if (numberToGuess === score)    {
@@ -42,6 +42,7 @@ else if (numberToGuess < score) {
     score = 0;
 }
 };
+
 
 function addPoints1()    {
     score = randomNumber1 + score;
