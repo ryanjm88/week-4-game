@@ -1,6 +1,3 @@
-body    {
-    background: url("week-4-game/assets/images/background.jpg");
-}
 
 .h4 {
     text-align: justify;
@@ -37,8 +34,11 @@ body    {
 
 .card-footer1   {
     text-align: left;
+    background-color: lightgrey;
 }
+
 
 #end    {
     text-align: center;
+    font-weight: bold;
 }

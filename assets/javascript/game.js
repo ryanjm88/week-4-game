@@ -7,19 +7,41 @@
 
 var wins = 0;
 var losses = 0;
-
 var score = 0;
+var numberToGuess = 0;
 
 
 
-function numberGenerator() {
-    document.getElementById("randomNumber").innerHTML = Math.floor(Math.random() * 80) + 20;
-}
+var randomNumberToGuess = Math.floor(Math.random() * 80) + 20;
+
 
 var randomNumber1 = Math.floor(Math.random() * 12) + 1;
 var randomNumber2 = Math.floor(Math.random() * 12) + 1;
 var randomNumber3 = Math.floor(Math.random() * 12) + 1;
 var randomNumber4 = Math.floor(Math.random() * 12) + 1;
+
+document.getElementById("playerPoints").innerHTML = score;
+
+document.getElementById("wins").innerHTML = wins;
+
+document.getElementById("losses").innerHTML = losses;
+
+var numberGenerator = function ()  { 
+    numberToGuess = randomNumberToGuess
+    document.getElementById("randomNumber").innerHTML = numberToGuess;
+    return numberToGuess;
+
+
+if (numberToGuess === score)    {
+    wins++;
+    alert("You got it!");
+}
+
+else if (numberToGuess < score) {
+    losses++;
+    score = 0;
+}
+};
 
 function addPoints1()    {
     score = randomNumber1 + score;
@@ -39,12 +61,4 @@ function addPoints3()    {
 function addPoints4()    {
     score = randomNumber4 + score;
     document.getElementById("playerPoints").innerHTML = score
-};
-
-
-document.getElementById("playerPoints").innerHTML = score;
-
-document.getElementById("wins").innerHTML = wins;
-
-document.getElementById("losses").innerHTML = losses;
-
+}
