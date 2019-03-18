@@ -30,16 +30,21 @@ var numberGenerator = function ()  {
     numberToGuess = randomNumberToGuess
     document.getElementById("randomNumber").innerHTML = numberToGuess;
 
+console.log(randomNumberToGuess);
+console.log(randomNumber1);
+console.log(randomNumber2);
+console.log(randomNumber3);
+console.log(randomNumber4);
 
-
-if (numberToGuess === score)    {
+if (numberToGuess == score)    {
     wins++;
     alert("You got it!");
 }
 
-else if (numberToGuess < score) {
+else if (numberToGuess <= score) {
     losses++;
     score = 0;
+    alert("You busted!");
 }
 };
 
@@ -47,19 +52,23 @@ else if (numberToGuess < score) {
 function addPoints1()    {
     score = randomNumber1 + score;
     document.getElementById("playerPoints").innerHTML = score
+    numberGenerator();
 }
 
 function addPoints2()    {
     score = randomNumber2 + score;
     document.getElementById("playerPoints").innerHTML = score
+    numberGenerator();
 }
 
 function addPoints3()    {
     score = randomNumber3 + score;
     document.getElementById("playerPoints").innerHTML = score
+    numberGenerator();
 }
 
 function addPoints4()    {
     score = randomNumber4 + score;
     document.getElementById("playerPoints").innerHTML = score
+    numberGenerator();
 }
